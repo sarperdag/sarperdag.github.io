@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG.js</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.5/svg.js"></script>
+  <script src="svg.draggable.js"></script>
+</head>
+<body>
+  <!-- <div id="drawing"></div> -->
+
+<svg width="300px" height="300px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle1" stroke="#979797" fill="#00D8FF" opacity="0.7" x="0.5" y="0" width="300" height="300">
+            	<!-- <animate attributeType="XML" attributeName="x" from="0" to="300" dur="3s" repeatCount="indefinite"/> -->
+        </rect>
+        <image xlink:href="mount.png" x="0" y="0" width="100" height="100" />
+        <text id="HELLO" font-family="Bebas" font-size="72" font-weight="normal" fill="#1F363B" text-anchor="middle">
+            <tspan x="50%" y="150" text-anchor="middle">HELLO
+				<animate attributeType="XML" attributeName="y" from="0" to="120" dur="2s" repeatCount="indefinite"/>
+            </tspan>
+            <tspan x="50%" y="200" text-anchor="middle">WORLD</tspan>
+        </text>
+    </g>
+</svg>
+
+
+  <script>
+  	// var draw = SVG('drawing').size(300, 300)
+
+	// var gradient = draw.gradient('linear', function(stop) {
+	//   stop.at(0, '#333')
+	//   stop.at(1, '#fff')
+	// })
+
+	// var rect = draw.rect(300, 300).attr({ fill: gradient })
+	// rect.draggable()
+
+	var rect1 = SVG.get('Rectangle1')
+	rect1.draggable()
+
+	// var text = draw.text(function(add) {
+	// 			  add.tspan('Keep your face to the').newLine()
+	// 			  add.tspan('sunshine ').fill('#fff').newLine()
+	// 			  add.tspan('and cannot see a shadow').newLine().fill('#000')
+	// 			})
+
+	// var finalSvg = draw.svg()
+
+// var svgBlob = new Blob([finalSvg], {type:"image/svg+xml;charset=utf-8"});
+// var svgUrl = URL.createObjectURL(svgBlob);
+// var downloadLink = document.createElement("a");
+// downloadLink.href = svgUrl;
+// downloadLink.download = "newesttree.svg";
+// document.body.appendChild(downloadLink);
+// downloadLink.click();
+// document.body.removeChild(downloadLink);
+
+
+  </script>
+</body>
+</html>
+
+
